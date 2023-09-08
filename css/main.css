@@ -62,12 +62,12 @@ input, textarea {
 /* 2. header */
 
 
-#header-con {
-    background-color: red;
+#main-header{
+    background-color: #ED202D;
 }
 #header-logo {
-	max-width: 150px;
-	margin-bottom: 30px;
+	max-width: 200px;
+    margin-top: 10px;
  }
 
 #burger-btn {
@@ -98,7 +98,7 @@ input, textarea {
 	display: block;
 	height: 100vh;
 	width: 100vw;
-	background: #62BBFF;
+	background: #ED202D;
 	z-index: 2;
 	position: absolute;
 	top: 0;
@@ -123,3 +123,129 @@ input, textarea {
 	color: #ffffff;
 	font-size: 2rem;
  }
+
+  /* home banner */
+
+  /* #hero-main {
+	display: none;
+ } */
+
+ /* #mobilebanner1 {
+	display: block;
+	max-width: 100%;
+	height: auto;
+ } */
+
+ /* 3. hero-con */
+
+#gallery-hero-con {
+    position: relative;
+    place-items: center;
+
+}
+
+#gallery-hero-con img {
+	grid-column: 1/-1;
+	grid-row: 1/1;
+	justify-self: center;
+
+	
+ }
+
+.btn {
+    position: absolute;
+    bottom: 120px;
+    left: 30px;
+    background-color: #ED202D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* 4. idp-introduction */
+
+.btn-2 {
+    background-color: #ED202D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#intro {
+    margin-top: 20px;
+}
+
+#video {
+	margin-top: 20px;
+}
+
+#idp-con h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #646469;
+}
+
+#idp-btn {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* 5. nick */
+
+
+/* 6. client */
+
+
+#client h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #646469;
+}
+
+
+/* 7. footer */
+
+#footer-con {
+	background-color: #ED202D;
+	margin-top: 20px;
+
+}
+
+#footer-nav {
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#footer-nav li a {
+    color: #ffffff;
+}
+
+#footer-location span{
+    color: #ffffff;
+}
+
+#newsletter h3{
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#footer-media {
+    margin-top: 20px;
+}
+
+#footer-media a {
+    color: #ffffff;
+}
