@@ -62,5 +62,14 @@ function scrollCarousel(direction) {
   });
 }
 
+//scroll script
+document.addEventListener("DOMContentLoaded", function() {
+    const portfolioLink = document.querySelector("#main-nav ul li:nth-child(2) a"); 
+    const portfolioSection = document.querySelector("#portfolio-section"); 
 
+    portfolioLink.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        portfolioSection.scrollIntoView({behavior: "smooth"}); 
+    });
+});
 

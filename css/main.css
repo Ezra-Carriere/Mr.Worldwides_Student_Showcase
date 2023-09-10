@@ -41,7 +41,7 @@ body {
 	/* font-size: 12px; */
 }
 
-/* Remove underlines from links */
+
 
 a {
 	text-decoration: none;
@@ -146,7 +146,7 @@ input, textarea {
 }
 
 #burger-con.slide-toggle {
-    max-height: 500px;  /* Adjust based on expected menu height */
+    max-height: 500px;  
 }
 
 
@@ -385,11 +385,11 @@ input, textarea {
 .wrapper {
     position: relative;
     overflow-x: visible;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 .wrapper::-webkit-scrollbar {
-    width: 0px; /* For Chrome, Safari, and Opera */
+    width: 0px; 
 }
 .wrapper i {
   top: 50%;
@@ -469,21 +469,21 @@ input, textarea {
   transform: scale(1.05);
 }
 .carousel .card button {
-  background-color: #b90000;  /* Replace with your preferred background color */
-  color: #fff;  /* Replace with your preferred text color */
+  background-color: #b90000;  
+  color: #fff;  
   padding: 10px 20px;
-  border: none;  /* Remove border */
+  border: none;  
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition */
+  transition: background-color 0.3s ease, color 0.3s ease;  
 }
 .carousel .card button a {
-  text-decoration: none;  /* Remove underline */
-  color: inherit;  /* Inherit the color from the button */
-  display: block;  /* Make it a block to fill the button */
-  height: 100%;  /* Fill the button */
-  width: 100%;  /* Fill the button */
-  text-align: center;  /* Center align the text */
+  text-decoration: none;  
+  color: inherit;  
+  display: block;  
+  height: 100%;  
+  width: 100%;  
+  text-align: center;  
   font-size: larger;
 }
 
@@ -538,7 +538,7 @@ input, textarea {
 }
 
 .arrow.right {
-    right: 30px;  /* Decrease this value to move it away from the corner */
+    right: 30px;  
     transform: translateY(-50%);
 }
 
@@ -639,7 +639,7 @@ input, textarea {
         font-size: 1.5em;
         transition: color 0.3s ease;
      }
-     #main-nav ul li a::before {  /* added */
+     #main-nav ul li a::before {  
     content: '';
     position: absolute;
     width: 0;
@@ -650,12 +650,12 @@ input, textarea {
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
-#main-nav ul li a:hover::before { /* added */
+#main-nav ul li a:hover::before { 
     visibility: visible;
     width: 100%;
 }
 #main-nav ul li a:hover {
-    color: #000; /* End text color */
+    color: #000; 
   }
   
      #burger-con ul li {
