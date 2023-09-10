@@ -192,6 +192,29 @@ input, textarea {
             align-items: center;
             flex-wrap: wrap;
             margin-bottom: 40px;
+            
+        }
+
+        .text {
+            /* background-color: rgba(255, 255, 255, 0.5); */
+            /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
+            border: 1px solid #ddd;           
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+            padding: 10px;                   
+        }
+
+        
+        .text h3 {
+            text-align: left;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .text h5 {
+            text-align: right;
+            margin-top: 10px;
+            color: #646469;
         }
 
         .testimonial img {
@@ -224,8 +247,8 @@ input, textarea {
         }
 
         .testimonial .text img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
         } 
 
         .testimonial h2 {
@@ -235,6 +258,12 @@ input, textarea {
         .testimonial p {
             font-size: 18px;
         }
+/* 
+        .feedback {
+            background-color: #d6d6d6;
+            width: 700px;
+            height: 100px;
+        } */
 
         /* Alternating layout */
         .testimonial.reverse {
@@ -372,7 +401,10 @@ input, textarea {
         order: -1;
      }
 
-    
+    .feedback-logo {
+        display: flex;
+    }
+
     .testimonial-title h3 {
         font-weight: bold;
         font-size: 3em;
