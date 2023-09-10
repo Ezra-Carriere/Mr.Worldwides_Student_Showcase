@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const studentWorkSection = document.querySelector(".student-projects");
 
     studentWorkLink.addEventListener("click", function(event) {
-        event.preventDefault(); // prevent the default action
+        event.preventDefault(); 
         studentWorkSection.scrollIntoView({behavior: "smooth"});
     });
 });
