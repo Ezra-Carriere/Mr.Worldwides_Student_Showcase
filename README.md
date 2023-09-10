@@ -11,6 +11,11 @@ TODO: Write usage instructions
 
 # Contributing
 
+Deviano Dames
+Ezra Carriere
+Mykyta Buria
+Shih-Hsuan Huang
+
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
