@@ -73,37 +73,81 @@ input, textarea {
 #burger-btn {
 	width: 40px;
 	height: 40px;
-	background: url(../images/burger.svg) no-repeat center;
 	margin-top: 15px;
 	margin-bottom: 20px;
 	transition: all .5s ease;
 	border: 0;
 	display: block;
+    background-color: #ED202D;
 
  }
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
 
+.bar {
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: #ffffff;
+    transition: all 0.3s;
+}
+
+
+.hamburger.is-active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+#burger-con {
+    transition: all 0.5s ease-in-out;
+}
+.hamburger.is-active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
  #burger-btn.expanded {
 	transform: rotate(90deg);
 	z-index: 3;
 
  }
- 
+ /* Hamburger animations */
+.burger-line {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    display: block;
+    margin: 4px auto;
+    transition: all 0.5s;
+}
+
+#burger-btn.open .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#burger-btn.open .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+#burger-btn.open .burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
  #burger-con {
-	/* margin-top: 20px; */
-	/* margin-bottom: 20px; */
-	display: none;
- }
- 
- #burger-con.slide-toggle {
-	display: block;
-	height: 100vh;
-	width: 100vw;
-	background: #ED202D;
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	right: 0;
- }
+    display: none;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    
+}
+
+#burger-con.slide-toggle {
+    max-height: 500px;  /* Adjust based on expected menu height */
+}
 
 
 #main-nav ul {
@@ -121,6 +165,7 @@ input, textarea {
 	text-align: center;
 	color: #ffffff;
 	font-size: 2rem;
+    position: relative;
  }
 
   /* home banner */
@@ -208,7 +253,294 @@ input, textarea {
 }
 
 /* 5. nick */
+.student-projects {
+  padding: 50px 0;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container h2{
+    text-align: center;
+    font-size: 300%;
+    padding: 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+
+.grid-item {
+  grid-column: span 4;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: opacity 0.4s;
+  flex-direction: column;
+}
+.discover-more {
+  background-color: #94494988;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.discover-more a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.overlay p {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+.student-project-title{
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #646469;
+}
+@media screen and (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/*scroll indicator*/
+.carousel .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: transform 0.1s linear;
+}
+
+.carousel .arrow:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.carousel .arrow.left {
+  left: -22px;
+}
+.carousel .arrow.right {
+  right: -22px;
+}
+/* 5.1 Portoflio cards */
+.wrapper {
+    position: relative;
+    overflow-x: visible;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+.wrapper::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -22px;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel{
+  height: 500px;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  width: 100%;
+  height: 350px;
+  list-style: none;
+  background: #cccccc;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 4px 7px 9px rgba(0, 0, 0, 0.35);
+  align-self: center;
+  background: linear-gradient(to bottom, #a00000 30%, #dadada 90%);
+  transition: transform 0.3s ease;
+  
+}
+.carousel .card:hover {
+  transform: scale(1.05);
+}
+.carousel .card button {
+  background-color: #b90000;  /* Replace with your preferred background color */
+  color: #fff;  /* Replace with your preferred text color */
+  padding: 10px 20px;
+  border: none;  /* Remove border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition */
+}
+.carousel .card button a {
+  text-decoration: none;  /* Remove underline */
+  color: inherit;  /* Inherit the color from the button */
+  display: block;  /* Make it a block to fill the button */
+  height: 100%;  /* Fill the button */
+  width: 100%;  /* Fill the button */
+  text-align: center;  /* Center align the text */
+  font-size: larger;
+}
+
+.carousel .card button:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.carousel .card .img {
+  background: #ffffff;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #000000;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.arrow.right {
+    right: 30px;  /* Decrease this value to move it away from the corner */
+    transform: translateY(-50%);
+}
 
 /* 6. client */
 
@@ -288,10 +620,13 @@ input, textarea {
 /* 8. ---Tablet Sized Screens--- */
 
 @media screen and (min-width: 768px) {
-    #burger-btn {display: none;}
+     #burger-btn {
+        display: none !important;
+    }
 
     #burger-con {
-        display: block;
+        display: block !important;
+        max-height: none !important;
     }
 
     #burger-con ul li, #burger-con ul li:first-child {
@@ -302,13 +637,26 @@ input, textarea {
      #main-nav ul li a {
         display: inline;
         font-size: 1.5em;
+        transition: color 0.3s ease;
      }
-
-     #main-nav ul li a:hover {
-        color: #646469;
-        border-bottom: 3px solid #ffbf00;
-        padding-bottom: 18px;
-     }
+     #main-nav ul li a::before {  /* added */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+#main-nav ul li a:hover::before { /* added */
+    visibility: visible;
+    width: 100%;
+}
+#main-nav ul li a:hover {
+    color: #000; /* End text color */
+  }
   
      #burger-con ul li {
         margin-right: 50px;
