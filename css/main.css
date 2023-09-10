@@ -221,6 +221,7 @@ input, textarea {
 
 #intro {
     margin-top: 20px;
+    /* text-align: center; */
 }
 
 #intro h2 {
@@ -231,6 +232,8 @@ input, textarea {
 #intro p {
     
     margin: 20px 0;
+    line-height: 35px;
+ 
 }
 
 #video {
@@ -246,6 +249,10 @@ input, textarea {
     color: #646469;
 }
 
+#idp-con .grid-con p {
+  line-height: 30px;
+}
+
 #idp-btn {
     text-align: center;
     margin-top: 20px;
@@ -254,7 +261,7 @@ input, textarea {
 
 /* 5. nick */
 .student-projects {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 .container {
@@ -553,6 +560,13 @@ input, textarea {
     color: #646469;
 }
 
+#client-text {
+  margin: 20px 0;
+}
+
+#client-text p {
+  line-height: 25px;
+}
 
 /* 7. footer */
 
@@ -620,7 +634,8 @@ input, textarea {
 /* 8. ---Tablet Sized Screens--- */
 
 @media screen and (min-width: 768px) {
-     #burger-btn {
+
+    #burger-btn {
         display: none !important;
     }
 
@@ -716,9 +731,10 @@ input, textarea {
         text-align: center;
      }
 
-     #client p {
+     #client-text p {
         font-size: 1.2em;
         margin: 20px 0;
+        line-height: 35px;
     }
 
     #footer-logo {
@@ -775,6 +791,163 @@ input, textarea {
         color: #646469;
     }
 
+}
+
+@media screen and (min-width: 1920px) {
+  #burger-btn {
+    display: none !important;
+}
+
+#burger-con {
+    display: block !important;
+    max-height: none !important;
+}
+
+#burger-con ul li, #burger-con ul li:first-child {
+    border: none;
+    display: inline;
+ }
+
+ #main-nav ul li a {
+    display: inline;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+ }
+ #main-nav ul li a::before {  
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #000000;
+visibility: hidden;
+transition: all 0.3s ease-in-out;
+}
+#main-nav ul li a:hover::before { 
+visibility: visible;
+width: 100%;
+}
+#main-nav ul li a:hover {
+color: #000; 
+}
+
+ #burger-con ul li {
+    margin-right: 50px;
+ }
+
+ #burger-con ul li:last-child {
+    margin-right: 0px;
+ }
+
+ #main-nav {
+    padding-left: 40px;
+
+ }
+
+ #header-logo {
+    max-width: 300px;
+    margin-top: 40px;
+    order: -1;
+ }
+
+ #hero-btn {
+    text-align: center;
+ }
+
+
+ .btn:hover {background-color: #ff6872;}
+
+ #intro {
+    margin-top: 100px;
+ }
+
+ #intro h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #646469;
+ }
+
+ #intro p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#idp-con .grid-con p {
+    font-size: 1.2em;
+}
+
+#idp-btn {
+    margin: 50px 0;
+}
+
+#idp-btn a:hover {background-color: #ff6872;}
+
+.client-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #646469;
+    text-align: center;
+ }
+
+ #client p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#footer-logo {
+    margin-top: 20px;
+}
+
+#footer-nav li a:hover {
+    color: #646469;
+}
+
+#footer-contact form {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.footer-submit {
+    margin-left: 15px;
+    
+}
+
+#footer-contact input[type="submit"] {
+    width: 100px;
+    padding: 12px 12px;
+    background-color: #DDDDDD;
+    color: #000000;
+    border: none;
+    transition: all 200ms ease-in;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#footer-contact input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #ED202D;
+    font-weight: bold;
+}
+
+#address {
+    color: #ffffff;
+}
+
+#footer-social {
+    margin-bottom: 20px;
+}
+
+#footer-media a {
+    font-size: 1.5em;
+}
+
+#footer-media a:hover {
+    color: #646469;
+}
 }
 
 .fade-in-element {
