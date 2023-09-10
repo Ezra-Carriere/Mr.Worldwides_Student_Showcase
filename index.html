@@ -39,7 +39,11 @@
             <div id="header-logo" class="col-start-1 col-end-3 m-col-start-2 m-col-end-4 xl-con-start-1 xl-con-end-3">
                 <a href="index.html"><img src="images/header-logo.svg" alt="logo"></a>
             </div>
-            <button id="burger-btn" class="col-start-4 col-end-5"></button>
+            <button id="burger-btn" class="col-start-4 col-end-5">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+            </button>
 
         </header>
  
@@ -92,9 +96,114 @@
                 </div>
             </section>
 
-            <!-- <section>
-               start from nick
-            </section> -->
+            <!-- hover images -->
+
+            <section class="student-projects">
+  <div class="container">
+    <h3 class="student-project-title">Level 4 Student Projects</h3>
+    <div class="grid">
+      <div class="grid-item">
+        <div class="image-container">
+          <img sizes="100vw"
+                    srcset="
+                    images/idp-hero_niaiij_c_scale,w_320.jpg 320w,
+                    images/idp-hero_niaiij_c_scale,w_718.jpg 718w,
+                    images/idp-hero_niaiij_c_scale,w_1009.jpg 1009w,
+                    images/idp-hero_niaiij_c_scale,w_1233.jpg 1233w,
+                    images/idp-hero_niaiij_c_scale,w_1353.jpg 1353w"
+                    src="images/idp-hero_niaiij_c_scale,w_1353.jpg"
+                     alt="Image 1" id="projects-students">
+          <div class="overlay">
+            
+            <p>Java Script Web Game</p>
+            <button class="discover-more"><a href="#">Learn More</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container">
+          <img sizes="100vw"
+                    srcset="
+                    images/idp-hero_niaiij_c_scale,w_320.jpg 320w,
+                    images/idp-hero_niaiij_c_scale,w_718.jpg 718w,
+                    images/idp-hero_niaiij_c_scale,w_1009.jpg 1009w,
+                    images/idp-hero_niaiij_c_scale,w_1233.jpg 1233w,
+                    images/idp-hero_niaiij_c_scale,w_1353.jpg 1353w"
+                    src="images/idp-hero_niaiij_c_scale,w_1353.jpg"
+                     alt="Image 2" id="projects-students2">
+          <div class="overlay">
+            
+            <p>Product Website</p>
+            <button class="discover-more"><a href="#">Discover More</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="image-container">
+          <img sizes="100vw"
+                    srcset="
+                    images/idp-hero_niaiij_c_scale,w_320.jpg 320w,
+                    images/idp-hero_niaiij_c_scale,w_718.jpg 718w,
+                    images/idp-hero_niaiij_c_scale,w_1009.jpg 1009w,
+                    images/idp-hero_niaiij_c_scale,w_1233.jpg 1233w,
+                    images/idp-hero_niaiij_c_scale,w_1353.jpg 1353w"
+                    src="images/idp-hero_niaiij_c_scale,w_1353.jpg"
+                     alt="Image 3" id="projects-students3">
+          <div class="overlay">
+            <p>Company Logo</p>
+            <button class="discover-more"><a href="#">Discover More</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--carousel portfolio cards -->
+
+        <div class="wrapper">
+          <div class="arrow left" onclick="scrollCarousel('left')">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+  <div class="arrow right" onclick="scrollCarousel('right')">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+  <div class="card-container">
+      <ul class="carousel">
+        <li class="card">
+          <div class="img"><img src="images/Avatar.png" alt="img" draggable="false"></div>
+          <h2>Blanche Pearson</h2>
+          <button><a href="#">Learn More</a></button>
+        </li>
+        <li class="card">
+          <div class="img"><img src="images/Avatar.png" alt="img" draggable="false"></div>
+          <h2>Joenas Brauers</h2>
+          <button><a href="#">Learn More</a></button>
+        </li>
+        <li class="card">
+          <div class="img"><img src="images/Avatar.png" alt="img" draggable="false"></div>
+          <h2>Lariach French</h2>
+          <button><a href="#">Learn More</a></button>
+        </li>
+        <li class="card">
+          <div class="img"><img src="images/Avatar.png" alt="img" draggable="false"></div>
+          <h2>James Khosravi</h2>
+          <button><a href="#">Learn More</a></button>
+        </li>
+        <li class="card">
+          <div class="img"><img src="images/Avatar.png" alt="img" draggable="false"></div>
+          <h2>Kristina Zasiadko</h2>
+          <button><a href="#">Learn More</a></button>
+        </li>
+        <li class="card">
+          <div class="img"><img src="images/Avatar.png" alt="img" draggable="false"></div>
+          <h2>Donald Horton</h2>
+          <button><a href="#">Learn More</a></button>
+        </li>
+      </ul>
+      </div>
+    </div>
+        
 
             <h2 class="client-title ">Level Four Client Project</h2>
 
@@ -125,7 +234,7 @@
             </section>
 
         </main>
-
+        
         <footer id="footer-hero">
             <section class="grid-con">
                 <h2 class="hidden">footer information</h2>
