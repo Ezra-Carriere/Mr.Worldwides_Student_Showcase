@@ -68,8 +68,32 @@ document.addEventListener("DOMContentLoaded", function() {
     const portfolioSection = document.querySelector("#portfolio-section"); 
 
     portfolioLink.addEventListener("click", function(event) {
-        event.preventDefault(); 
+        event.preventDefault(); // prevent the default action
         portfolioSection.scrollIntoView({behavior: "smooth"}); 
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  var fadeInElements = document.querySelectorAll('.fade-in-element');
+
+  // Function to check if elements are in view
+  function checkIfInView() {
+    var windowHeight = window.innerHeight;
+    var scrollY = window.scrollY || window.pageYOffset;
+
+    fadeInElements.forEach(function(element) {
+      var scrollPosition = element.getBoundingClientRect().top + scrollY;
+      var scrollTrigger = scrollY + windowHeight - windowHeight / 4; // adjust it as needed
+
+      if (scrollTrigger >= scrollPosition) {
+        element.classList.add('visible');
+      }
+    });
+  }
+
+  // Initial check
+  checkIfInView();
+
+  // Listen for scroll events
+  window.addEventListener('scroll', checkIfInView);
+});
