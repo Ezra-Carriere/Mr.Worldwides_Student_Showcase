@@ -74,6 +74,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+    const studentWorkLink = document.querySelector("#main-nav ul li:nth-child(4) a");
+    const studentWorkSection = document.querySelector(".student-projects");
+
+    studentWorkLink.addEventListener("click", function(event) {
+        event.preventDefault(); // prevent the default action
+        studentWorkSection.scrollIntoView({behavior: "smooth"});
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
   var fadeInElements = document.querySelectorAll('.fade-in-element');
 
   // Function to check if elements are in view
